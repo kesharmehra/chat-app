@@ -19,11 +19,6 @@ socket.on('disconnect', function () {
 });
 
 socket.on('newMessage', function (message) {
-    socket.emit('createMessage', {
-       from:'iamtheclient@clientsworld.com',
-       to: message.from,
-       text: `hi ${message.from}!!! in fact I was waiting for your message `        
-    })
     console.log('Message from server:', message);
 
 })
