@@ -18,7 +18,12 @@ socket.on('disconnect', function () {
     console.log('disconnected from server')
 });
 
-socket.on('newMessage', function (message) {
+socket.on('welcomeMessage', function (message) {
+    console.log('Message from server:', message);
+
+})
+
+socket.on('newUserJoined', function (message) {
     console.log('Message from server:', message);
 
 })
